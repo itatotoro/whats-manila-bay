@@ -55,6 +55,14 @@ a:hover{
   border-radius: 10px;
 }
 
+.header a{
+  color: white;
+}
+
+.header a:hover{
+  color: #FFCF40;
+}
+
 .header h1{
   font-size: 24px;
   font-weight: 400;
