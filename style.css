@@ -57,6 +57,7 @@ a:hover{
 
 .header a{
   color: white;
+  text-decoration: underline;
 }
 
 .header a:hover{
