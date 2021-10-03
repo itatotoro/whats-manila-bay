@@ -1,0 +1,273 @@
+/******************************************************************************
+START Glitch hello-app default styles
+
+The styles in this section do some minimal CSS resets, set default fonts and 
+colors, and handle the layout for our footer and "Remix on Glitch" button. If
+you're new to CSS they may seem a little complicated, but you can scroll down
+to this section's matching END comment to see page-specific styles.
+******************************************************************************/
+
+
+/* 
+  The style rules specify elements by type and by attributes such as class and ID
+  Each section indicates an element or elements, then lists the style properties to apply
+  See if you can cross-reference the rules in this file with the elements in index.html
+*/
+
+/* Basic page style resets */
+* {
+  box-sizing: border-box;
+}
+[hidden] {
+  display: none !important;
+}
+
+/* Import fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-image: url("https://cdn.glitch.com/fb10f383-0890-409e-b36f-cef479b16ff7%2FBackground-b.jpg?v=1633170582346");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  margin: 20px;
+}
+
+a{
+  color: #1f7d80;
+  text-decoration: none;
+  }
+
+a:hover{
+  color: white;
+}
+
+/* Page structure */
+.header {
+  background-color: rgba(22, 51, 51, 0.6);
+  align-items: center;
+  text-align: center;
+  color:white;
+  font-size: 12px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.header h1{
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#row{
+  margin: 2vw;
+}
+
+#lcolumn{
+  float: left;
+  width: 100%;
+  padding: 20px;
+  transition-duration: 0.5s;
+}
+
+#rcolumn{
+  float: left;
+  width: 0%;
+  opacity: 0;
+  margin-top: 20px;
+  padding: 20px;
+  color: rgb(22, 51, 51);
+  font-weight: 400;
+  transition-duration: 0.5s;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+}
+
+/* Image grid structure*/
+
+#grid { 
+  display: grid;
+  height: 70%;
+  grid-gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: 1fr;
+  transition-duration: 0.3s;
+  }
+
+#grid::before {
+  content: '';
+  width: 0;
+  padding-bottom: 100%;
+  grid-row: 1 / 1;
+  grid-column: 1 / 1;
+}
+
+#grid > *:first-child {
+  grid-row: 1 / 1;
+  grid-column: 1 / 1;
+}
+
+#grid > div {
+  padding: .5em;
+  text-align: center;
+}
+
+
+
+/* Image frame structure*/
+#frame{
+  display: none;
+  opacity: 0;
+  z-index: -2;
+  width: auto;
+  margin: auto; 
+  height: 600px;
+  background-image: url(https://cdn.glitch.com/fb10f383-0890-409e-b36f-cef479b16ff7%2Fmangroves.jpg?v=1633153658313);
+  background-size: cover;
+  transition: display 
+}
+
+/* Images in the grid*/
+
+#grid > div{
+  transition: outline 0.3s;
+}
+
+#mangrove{
+  background-image: url(https://cdn.glitch.com/fb10f383-0890-409e-b36f-cef479b16ff7%2Fmangroves.jpg?v=1633153658313);
+  background-size: cover;
+}
+
+#aerial{
+  background-image: url(https://cdn.glitch.com/fb10f383-0890-409e-b36f-cef479b16ff7%2FManila%20Bay%20aerial%20crop.jpg?v=1633159761308);
+  background-size: cover;
+}
+
+#dolomite{
+  background-image: url(https://cdn.glitch.com/fb10f383-0890-409e-b36f-cef479b16ff7%2Fdolomite%20crop.jpg?v=1633160339439);
+  background-size: cover;
+}
+
+#stormsurge{
+  background-image: url(https://cdn.glitch.com/fb10f383-0890-409e-b36f-cef479b16ff7%2FStorm%20surge.jpg?v=1633159016499);
+  background-size: cover;
+}
+
+#sunset{
+  background-image: url(https://cdn.glitch.com/fb10f383-0890-409e-b36f-cef479b16ff7%2Fgen2-manila-bay-sunset_2019-01-26_22-42-15.jpg?v=1633159016184);
+  background-size: cover;
+}
+
+#birds{
+  background-image: url(https://cdn.glitch.com/fb10f383-0890-409e-b36f-cef479b16ff7%2Fbird%20crop.jpg?v=1633160564961);
+  background-size: cover;
+}
+
+#church{
+  background-image: url(https://cdn.glitch.com/fb10f383-0890-409e-b36f-cef479b16ff7%2FTaliptip%20chapel.jpg?v=1633159109434);
+  background-size: cover;
+}
+
+#swim{
+  background-image: url(https://cdn.glitch.com/fb10f383-0890-409e-b36f-cef479b16ff7%2Fswim%20crop.jpg?v=1633160720913);
+  background-size: cover;
+}
+
+#fishers{
+  background-image: url(https://cdn.glitch.com/fb10f383-0890-409e-b36f-cef479b16ff7%2Ffishers%20crop.jpg?v=1633160846256);
+  background-size: cover;
+}
+
+@keyframes glow {
+   50% {box-shadow: 20px 10px 15px rgba(255, 255, 255, 0.6) inset;}
+}
+
+/* Button*/
+
+.pdetail{
+  float: right;
+  background-color: rgba(22, 51, 51, 0.6);
+  color: white;
+  font-weight: 900;
+  border: none;
+  border-radius: 5px;
+  transition-duration: 0.3s;
+}
+
+.pdetail:hover{
+  background-color: rgba(22, 51, 51);
+}
+
+.cdetail{
+  float: right;
+  margin-top: 10px;
+  margin-right: 10px;
+  background-color: rgba(22, 51, 51, 0.6);
+  color: white;
+  font-weight: 900;
+  border: none;
+  border-radius: 5px;
+  transition-duration: 0.3s;
+}
+
+.cdetail:hover{
+  background-color: rgba(22, 51, 51);
+}
+
+#picinfo{
+  font-size: 16px;
+  margin-bottom: 32px;
+}
+
+#refs{
+  font-size: 12px;
+  font-style: italic;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.footer{
+  margin: auto;
+  text-align: center;
+  padding: 20px;
+  color: white;
+  font-size: 12px;
+}
+
+#verify{
+  background-color: rgba(22, 51, 51, 0.6);
+  width: 30%;
+  padding: 10px;
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  border: none;
+  border-radius: 5px;
+  transition-duration: 0.3s;
+}
+
+#verify:hover{
+  background-color: rgba(22, 51, 51);
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other on smaller screens (600px wide or less) */
+@media screen and (max-width: 600px) {
+  #lcolumn, #rcolumn {
+    width: 100%;
+  }
+  
+  
+  
+ 

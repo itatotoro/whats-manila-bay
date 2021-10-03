@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--
+      This is the page head - it contains info the browser uses to display the page
+      You won't see what's in the head in the page
+      Scroll down to the body element for the page content
+    -->
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+
+    <!-- 
+      This is an HTML comment
+      You can write text in a comment and the content won't be visible in the page
+    -->
+
+    <title>Manila Bay?</title>
+
+    <!-- Import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- Import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
+    <div class="header">
+      <h1>
+          Select all squares with the <b>Manila Bay</b>.
+      </h1>
+      <p>
+        Click [+] / [-] to toggle details.<br>
+        Click 'Verify' once done selecting.
+      </p>
+    </div>
+
+    <!-- The wrapper and content divs set margins and positioning -->
+    <div id="row">
+      <div id="lcolumn">
+        <div id ="frame">
+          <button class = "cdetail" onclick="closedetail()" >
+          -
+          </button>
+        </div>
+        <div id ="grid">
+          <div class="gpic" id = "mangrove" onclick="select(this)">
+            <button class = "pdetail" onclick="detail('1')" >
+            +
+            </button>
+          </div>
+          <div class="gpic" id = "aerial" onclick="select(this)">
+            <button class = "pdetail" onclick="detail(2)" >
+            +
+            </button>
+          </div>
+          <div class="gpic" id = "dolomite" onclick="select(this)">
+            <button class = "pdetail" onclick="detail('3')" >
+            +
+            </button>
+          </div>
+          <div class="gpic" id = "stormsurge" onclick="select(this)">
+            <button class = "pdetail" onclick="detail('4')" >
+            +
+            </button>
+          </div>
+            <div class="gpic" id = "sunset" onclick="select(this)">
+            <button class = "pdetail" onclick="detail('5')" >
+            +
+            </button>
+          </div>
+            <div class="gpic" id = "birds" onclick="select(this)">
+            <button class = "pdetail" onclick="detail('6')" >
+            +
+            </button>
+          </div>
+           <div class="gpic" id = "church" onclick="select(this)">
+            <button class = "pdetail" onclick="detail('7')" >
+            +
+            </button>
+          </div>
+           <div class="gpic" id = "swim" onclick="select(this)">
+            <button class = "pdetail" onclick="detail('8')" >
+            +
+            </button>
+          </div>
+            <div class="gpic" id = "fishers" onclick="select(this)">
+            <button class = "pdetail" onclick="detail('9')" >
+            +
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="rcolumn">
+        <div id = "picinfo">
+        </div>
+        <div id = "refs">
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+        <button id = "verify" onclick="window.location.href='https://whats-a-bay.glitch.me/menti.html';">
+          Verify
+        </button>
+      <p>
+        Project by @itatotoro for Independent Study: People and Planet (2021). All pictures belong to the credited owners.
+      </p>
+    </footer>
+  </body>
+</html>
+
+ <!--
+All battles for the bay,<br>From Dewey to the waterfront lords,<br>Have never been for the waters.<br><br>They ebb and flow indifferently<br>About us, eager to bear<br>Our reflection, prompt submersion.
+
+
+ March 20, 2019 | Pasig River flowing into Manila Bay
+<br><a href="https://www.rappler.com/newsbreak/in-depth/why-manila-bay-cannot-be-saved-6-months-rehabilitation-series-part-2 ">Photo:</a> Inoue Jaena | Rappler<br>
+References: <a href="https://www.esquiremag.ph/culture/lifestyle/manila-bay-history-a1729-20190111-lfrm ">[1]</a> <a href="https://www.denr.gov.ph/index.php?id=813&page=74&sort=&filter=&searchword= ">[2]</a> <a href="https://mb.com.ph/2018/01/28/finally-a-master-plan-for-manila-bay/ ">[3]</a>
+          
+-->
