@@ -11,6 +11,25 @@ This is your site JavaScript code - you can add interactivity and carry out proc
 This is a comment that can span multiple lines 
 - use comments to make your own notes!
 */
+
+/*
+Responsive design stuff.
+*/
+
+var r = window.matchMedia("(max-width: 600px)")
+respDesign(r) // Call listener function at run time
+r.addListener(respDesign) // Attach listener function on state changes
+
+function respDesign(r) {
+  if (r.matches) { // If media query matches
+    document.getElementById("lcolumn").style.width = "100%";
+    document.getElementById("rcolumn").style.width = "100%";
+    document.getElementById("grid").style.width = "100%";
+  } else {
+    
+  }
+}
+
 document.getElementById("frame").style.display = "none";
 /*
 document.getElementById("picinfo").innerHTML = "";
@@ -18,8 +37,14 @@ document.getElementById("refs").innerHTML = "";
 */
 
 function detail(a){
-  document.getElementById("lcolumn").style.width = "70%";
-  document.getElementById("rcolumn").style.width = "30%";
+  if (r.matches){
+    document.getElementById("lcolumn").style.width = "100%";
+    document.getElementById("rcolumn").style.width = "100%";
+  }
+  else {
+    document.getElementById("lcolumn").style.width = "70%";
+    document.getElementById("rcolumn").style.width = "30%";
+  }
   document.getElementById("rcolumn").style.opacity = 1;
   document.getElementById("grid").style.display = "none";
   document.getElementById("frame").style.display = "block";
@@ -95,62 +120,62 @@ function closedetail(){
 
 function select(obj){
   var pic = obj.id;
-  var a = window.getComputedStyle(obj).outlineStyle;
-  var x = document.getElementsByClassName("gpic");
-  var l = x.length;
+  var a = window.getComputedStyle(obj, null).outlineStyle;
+  
+  if (pic == "mangrove"){
+  document.getElementById("birds").style.animation = "glow 3s 1 alternate";
+  document.getElementById("aerial").style.animation = "glow 3s 1 alternate";
+  document.getElementById("stormsurge").style.animation = "glow 3s 1 alternate";
+  document.getElementById("fishers").style.animation = "glow 3s 1 alternate";
+  }
+  if (pic == "aerial"){
+    document.getElementById("mangrove").style.animation = "glow 3s 1 alternate";
+    document.getElementById("dolomite").style.animation = "glow 3s 1 alternate";
+    document.getElementById("fishers").style.animation = "glow 3s 1 alternate";
+    document.getElementById("sunset").style.animation = "glow 3s 1 alternate";
+    document.getElementById("church").style.animation = "glow 3s 1 alternate";
+    document.getElementById("swim").style.animation = "glow 3s 1 alternate";
+  }
+  if (pic == "dolomite"){
+    document.getElementById("aerial").style.animation = "glow 3s 1 alternate";
+    document.getElementById("sunset").style.animation = "glow 3s 1 alternate";
+    document.getElementById("swim").style.animation = "glow 3s 1 alternate";
+  }
+  if (pic == "stormsurge"){
+    document.getElementById("mangrove").style.animation = "glow 3s 1 alternate";
+    document.getElementById("sunset").style.animation = "glow 3s 1 alternate";
+  }
+  if (pic == "sunset"){
+    document.getElementById("dolomite").style.animation = "glow 3s 1 alternate";
+    document.getElementById("stormsurge").style.animation = "glow 3s 1 alternate";
+    document.getElementById("swim").style.animation = "glow 3s 1 alternate";
+    document.getElementById("aerial").style.animation = "glow 3s 1 alternate";
+  }
+  if (pic == "birds"){
+    document.getElementById("mangrove").style.animation = "glow 3s 1 alternate";
+  }
+  if (pic == "church"){
+    document.getElementById("aerial").style.animation = "glow 3s 1 alternate";
+    document.getElementById("fishers").style.animation = "glow 3s 1 alternate";
+  }
+  if (pic == "swim"){
+    document.getElementById("aerial").style.animation = "glow 3s 1 alternate";
+    document.getElementById("dolomite").style.animation = "glow 3s 1 alternate";
+     document.getElementById("sunset").style.animation = "glow 3s 1 alternate";
+  }
+  if (pic == "fishers"){
+    document.getElementById("mangrove").style.animation = "glow 3s 1 alternate";
+    document.getElementById("aerial").style.animation = "glow 3s 1 alternate";
+    document.getElementById("church").style.animation = "glow 3s 1 alternate";
+  } 
   if (a == "none") {
     obj.style.outline = "5px solid white";
     obj.style.outlineoffset = "-30px";
-    
-    if (pic == "mangrove"){
-      document.getElementById("birds").style.animation = "glow 3s 1 alternate";
-      document.getElementById("aerial").style.animation = "glow 3s 1 alternate";
-      document.getElementById("stormsurge").style.animation = "glow 3s 1 alternate";
-      document.getElementById("fishers").style.animation = "glow 3s 1 alternate";
-    }
-    if (pic == "aerial"){
-      document.getElementById("mangrove").style.animation = "glow 3s 1 alternate";
-      document.getElementById("dolomite").style.animation = "glow 3s 1 alternate";
-      document.getElementById("fishers").style.animation = "glow 3s 1 alternate";
-      document.getElementById("sunset").style.animation = "glow 3s 1 alternate";
-      document.getElementById("church").style.animation = "glow 3s 1 alternate";
-      document.getElementById("swim").style.animation = "glow 3s 1 alternate";
-    }
-    if (pic == "dolomite"){
-      document.getElementById("aerial").style.animation = "glow 3s 1 alternate";
-      document.getElementById("sunset").style.animation = "glow 3s 1 alternate";
-      document.getElementById("swim").style.animation = "glow 3s 1 alternate";
-    }
-    if (pic == "stormsurge"){
-      document.getElementById("mangrove").style.animation = "glow 3s 1 alternate";
-      document.getElementById("sunset").style.animation = "glow 3s 1 alternate";
-    }
-    if (pic == "sunset"){
-      document.getElementById("dolomite").style.animation = "glow 3s 1 alternate";
-      document.getElementById("stormsurge").style.animation = "glow 3s 1 alternate";
-      document.getElementById("swim").style.animation = "glow 3s 1 alternate";
-      document.getElementById("aerial").style.animation = "glow 3s 1 alternate";
-    }
-    if (pic == "birds"){
-      document.getElementById("mangrove").style.animation = "glow 3s 1 alternate";
-    }
-    if (pic == "church"){
-      document.getElementById("aerial").style.animation = "glow 3s 1 alternate";
-      document.getElementById("fishers").style.animation = "glow 3s 1 alternate";
-    }
-    if (pic == "swim"){
-      document.getElementById("aerial").style.animation = "glow 3s 1 alternate";
-      document.getElementById("dolomite").style.animation = "glow 3s 1 alternate";
-       document.getElementById("sunset").style.animation = "glow 3s 1 alternate";
-    }
-    if (pic == "fishers"){
-      document.getElementById("mangrove").style.animation = "glow 3s 1 alternate";
-      document.getElementById("aerial").style.animation = "glow 3s 1 alternate";
-      document.getElementById("church").style.animation = "glow 3s 1 alternate";
-    }
   } else {
     obj.style.outline = "none";
   }
   var newone = obj.cloneNode(true);
   obj.parentNode.replaceChild(newone, obj);
+  newone.id = pic;
+  newone.onclick = select(this);  
 }

@@ -104,6 +104,8 @@ a:hover{
 
 #grid { 
   display: grid;
+  margin: auto;
+  width: 50%;
   height: 70%;
   grid-gap: 10px;
   grid-template-columns: 1fr 1fr 1fr;
@@ -130,7 +132,6 @@ a:hover{
 }
 
 
-
 /* Image frame structure*/
 #frame{
   display: none;
@@ -148,6 +149,7 @@ a:hover{
 
 #grid > div{
   transition: outline 0.3s;
+  outline-style: none;
 }
 
 #mangrove{
@@ -196,7 +198,7 @@ a:hover{
 }
 
 @keyframes glow {
-   50% {box-shadow: 20px 10px 15px rgba(255, 255, 255, 0.6) inset;}
+   50% {box-shadow: 3vw 0px 20px 10px rgba(31, 67, 67, 0.8) inset;}
 }
 
 /* Button*/
@@ -276,7 +278,10 @@ a:hover{
   #lcolumn, #rcolumn {
     width: 100%;
   }
-  
+  #grid{
+    width: 100%;
+  }
+}
   
   
  
