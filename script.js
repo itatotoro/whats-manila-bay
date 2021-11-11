@@ -41,6 +41,7 @@ function detail(a){
   document.getElementById("rcolumn").style.opacity = 1;
   document.getElementById("grid").style.display = "none";
   document.getElementById("frame").style.display = "block";
+  document.getElementById("frame").style.backgroundSize = "cover";
   document.getElementById("frame").style.opacity = 1;
   document.getElementById("verify").style.opacity = 0;
   document.getElementById("row").style.margin = 0;
@@ -72,7 +73,7 @@ function detail(a){
     document.getElementById("frame").style.backgroundImage = "url(https://cdn.glitch.com/fb10f383-0890-409e-b36f-cef479b16ff7%2F1600505780-manila-bay-dolomite-opening-september-19-2020-007-738.jpg?v=1633158878483)";
   }
   if (a == 4){
-    document.getElementById("picinfo").innerHTML ='Known =  What seawalls should do, the thrill of being splashed<br>Unknown = The fury of the sea? Storm surge? <i>Daluyong?</i>';
+    document.getElementById("picinfo").innerHTML ='Known:  What seawalls should do; the thrill of being splashed<br>Unknown: The fury of the sea? Storm surge? <i>Daluyong?</i>';
     document.getElementById("refs").innerHTML =' September 26, 2011 | Baywalk along Roxas Boulevard, Manila during a storm surge at the height of Typhoon Pedring (international name: Nesat)<br><a href="https://curlybookworm.wordpress.com/tag/pedring/">Photo:</a> Paulo Payumo<br>References:<a href="https://www.philstar.com/pilipino-star-ngayon/metro/2018/09/16/1851889/roxas-boulevard-nalubog-sa-baha-basura">[1]</a> <a href="https://www.gmanetwork.com/news/news/nation/233611/manila-cleans-up-after-typhoon-pedring/story/">[2]</a> <a href="https://news.abs-cbn.com/focus/11/17/13/storm-surges-waves-why-manila-risk">[3]</a> <a href="https://www.officialgazette.gov.ph/laginghanda/storm-surges/">[4]</a>';
     document.getElementById("frame").style.backgroundImage = "url(https://cdn.glitch.com/fb10f383-0890-409e-b36f-cef479b16ff7%2FStorm%20surge.jpg?v=1633159016499)";
   }
@@ -111,7 +112,7 @@ function detail(a){
     }else{
       document.getElementById("frame").style.backgroundImage = "url(https://cdn.glitch.com/fb10f383-0890-409e-b36f-cef479b16ff7%2FManila%20Bay%20swimming.jpg?v=1633159109773)";
     } 
-    document.getElementById("picinfo").innerHTML ='<b>What&#39;s in this water?</b><br><br><ul style="disc"><li>Fecal coliform bacteria in the water [2019: 1.26 billion MPN/100mL, standard is 100 MPN/100mL]<sup><a href="https://www.pna.gov.ph/articles/1151877">[1]</a></sup></li><li>Household wastes dumped into the 25-kilometer long Pasig River, plus other rivers and estuaries<sup><a href="https://www.rappler.com/newsbreak/in-depth/why-manila-bay-cannot-be-saved-6-months-rehabilitation-series-part-2">[2]</a></sup></li><li>Wastewater discharge from waterside establishments</li><li>85% of Metro Manila’s household toilets, unconnected to sewerage system<sup><a href="https://mb.com.ph/2021/02/18/a-reminder-on-the-problem-of-pollution-in-manila-bay/">[3]</a></sup></li><li>Single-use plastics, among other kinds of nonbiodegradables<sup><a href="https://www.pna.gov.ph/articles/1063387">[3]</a> <a href="https://www.rappler.com/environment/plastic-bags-garbage-manila-bay">[4]</a></sup></li></ul>Swimming in Manila Bay is banned by Manila ordinance.';
+    document.getElementById("picinfo").innerHTML ='<b>What&#39;s in this water?</b><br><br><ul style="disc"><li>Fecal coliform bacteria in the water [2019: 1.26 billion MPN/100mL, standard is 100 MPN/100mL]<sup><a href="https://www.pna.gov.ph/articles/1151877">[1]</a></sup></li><li>Household wastes dumped into the 25-kilometer long Pasig River, plus other rivers and estuaries<sup><a href="https://www.rappler.com/newsbreak/in-depth/why-manila-bay-cannot-be-saved-6-months-rehabilitation-series-part-2">[2]</a></sup></li><li>Wastewater discharge from waterside establishments</li><li>85% of Metro Manila’s household toilets, unconnected to sewerage system<sup><a href="https://mb.com.ph/2021/02/18/a-reminder-on-the-problem-of-pollution-in-manila-bay/">[3]</a></sup></li><li>Single-use plastics, among other kinds of nonbiodegradables<sup><a href="https://www.pna.gov.ph/articles/1063387">[3]</a> <a href="https://www.rappler.com/environment/plastic-bags-garbage-manila-bay">[4]</a></sup></li></ul><i>Swimming in Manila Bay is banned by Manila ordinance.</i>';
     document.getElementById("refs").innerHTML =' June 8, 2018 | Strip of sand at the stalled Baseco Reclamation Expansion Project<br><a href="https://www.rappler.com/nation/manila-bay-world-ocean-day-photos">Photo: </a> Leanne Jazul | Rappler<br>References: <a href="https://www.rappler.com/nation/manila-bay-lgus-violating-environmental-laws">[5]</a> <a href="https://www.cnnphilippines.com/news/2020/1/23/denr-manila-bay-rehab-fecal-coliform-levels.html">[6]</a>';
   }
   if (a == 9){
@@ -121,7 +122,7 @@ function detail(a){
     }else{
       document.getElementById("frame").style.backgroundImage = "url(https://cdn.glitch.com/fb10f383-0890-409e-b36f-cef479b16ff7%2FFisherfolk%20protest.jfif?v=1633159109329)";
     } 
-    document.getElementById("picinfo").innerHTML ='Protest signage (translated from Filipino):<br><br>Defend livelihood <br>Demolition of mussel farms and fish pens<br>Oppose, resist, do not permit';
+    document.getElementById("picinfo").innerHTML ='Rightmost protest signage (translated from Filipino):<br><br>DEFEND LIVELIHOOD <br>DEMOLITION OF MUSSEL FARMS AND FISH PENS<br>OPPOSE, RESIST, DO NOT PERMIT';
     document.getElementById("refs").innerHTML ='September 7, 2021 | Protest by the Samahan ng Mangingisda sa Parañaque (PANGISDA-Pilipinas) in La Huerta, Parañaque to stop demolition of fishpens in DENR’s Manila Bay rehabilitation project<br><a href="https://news.abs-cbn.com/news/multimedia/slideshow/09/07/21/the-day-in-photos-september-7-2021">Photo: </a>George Calvelo | ABS-CBN NewsReferences: <a href="https://news.abs-cbn.com/news/09/02/21/paggiba-ng-mga-tahongan-sa-manila-bay-tinutulan">[1]</a> <a href="https://angpamalakaya.org/2021/09/06/pamalakayas-tahong-and-talaba-growers-storm-denr-ahead-of-its-demolition-order/">[2]</a>';
   }
   
@@ -202,4 +203,23 @@ function select(obj){
   obj.parentNode.replaceChild(newone, obj);
   newone.id = pic;
   newone.onclick = select(this);  
+}
+
+function verify(){
+  var count = 0;
+  var pictures = document.getElementsByClassName("gpic");
+  var l = 0;
+  for (l = 0; l < pictures.length; l++){
+    var o = window.getComputedStyle(pictures[l], null).outlineStyle;
+    if (o != "none"){
+      count++;
+    }
+  }
+  console.log(count);
+  if (count == 9){
+    alert("You selected all 9 pictures of Manila Bay!");
+  } else{
+    alert("You only selected " + count + " of all 9 pictures of Manila Bay...");
+  }
+  window.location.href='https://whats-a-bay.glitch.me/menti.html';
 }
