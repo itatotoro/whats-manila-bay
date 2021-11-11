@@ -221,5 +221,5 @@ function verify(){
   } else{
     alert("You only selected " + count + " of all 9 pictures of Manila Bay...");
   }
-  window.location.href='https://whats-a-bay.glitch.me/menti.html';
+  window.location.href='https://itatotoro.github.io/whats-manila-bay/menti.html';
 }
