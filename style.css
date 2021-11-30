@@ -83,7 +83,7 @@ a:hover{
   float: left;
   width: 100%;
   padding: 20px;
-  transition-duration: 0.5s;
+  transition: width 0.5s;
 }
 
 #rcolumn{
@@ -95,9 +95,9 @@ a:hover{
   padding: 20px;
   color: rgb(22, 51, 51);
   font-weight: 400;
-  transition-duration: 0.5s;
   background-color: rgba(255, 255, 255, 0.4);
   border-radius: 10px;
+  transition: width 0.5s;
 }
 
 /* Image grid structure*/
@@ -110,7 +110,6 @@ a:hover{
   grid-gap: 10px;
   grid-template-columns: 1fr 1fr 1fr;
   grid-auto-rows: 1fr;
-  transition-duration: 0.3s;
   }
 
 #grid::before {
@@ -142,7 +141,6 @@ a:hover{
   height: 600px;
   background-image: url(https://cdn.glitch.com/fb10f383-0890-409e-b36f-cef479b16ff7%2Fmangroves.jpg?v=1633153658313);
   background-size: cover;
-  transition: display 
 }
 
 /* Images in the grid*/
@@ -212,7 +210,6 @@ a:hover{
   font-weight: 900;
   border: none;
   border-radius: 5px;
-  transition-duration: 0.3s;
 }
 
 .pdetail:hover{
@@ -230,7 +227,6 @@ a:hover{
   font-weight: 900;
   border: none;
   border-radius: 5px;
-  transition-duration: 0.3s;
 }
 
 .cdetail:hover{
@@ -278,7 +274,6 @@ a:hover{
   font-weight: 400;
   border: none;
   border-radius: 5px;
-  transition-duration: 0.3s;
 }
 
 #verify:hover{
@@ -291,7 +286,9 @@ a:hover{
     background-size: cover;
     background-attachment: scroll;
     background-position: top;
+    min-height: 100vh;
   }
+  
   #lcolumn, #rcolumn {
     width: 100%;
   }
@@ -299,8 +296,8 @@ a:hover{
     width: 100%;
   }
   .pdetail, .cdetail {
-    height: 18%;
-    width: 18%;
+    height: 25%;
+    width: 25%;
     max-height: 30px;
     max-width: 30px;
   }

@@ -23,7 +23,7 @@ r.addListener(respDesign) // Attach listener function on state changes
 function respDesign(r) {
   if (r.matches) { // If media query matches
     document.getElementById("lcolumn").style.width = "100%";
-    document.getElementById("rcolumn").style.width = "100%";
+     document.getElementById("rcolumn").style.width = "100%";
     document.getElementById("grid").style.width = "100%";
   } else {
     
@@ -133,7 +133,8 @@ function detail(a){
 function closedetail(){
   document.getElementById("lcolumn").style.width = "100%";
   document.getElementById("rcolumn").style.width = "0%";
-  document.getElementById("rcolumn").style.opacity = 0;
+  document.getElementById("rcolumn").style.opacity = "0%";
+  document.getElementById("rcolumn").style.display = "none";
   document.getElementById("row").style.margin = "2vw";
   document.getElementById("frame").style.display = "none";
   document.getElementById("grid").style.display = "grid";
